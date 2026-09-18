@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pen</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      height: 70px;
+      background: grey;
+      font-size: 50px;
+      color: white;
+      font-family: Verdana;
+    }
+
+    body {
+      background: lightblue;
+    }
+
+    a {
+      color: white;
+      background: grey;
+      text-decoration: none;
+      padding: 10px;
+      font-size: 30px;
+      border-radius: 10px;
+    }
+
+    label {
+      font-family: Verdana;
+      color: grey;
+      font-size: 30px;
+    }
+
+    button {
+      font-size: 30px;
+      background: grey;
+      color: white;
+    }
+
+    input {
+      font-size: 30px;
+      background: grey;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <p id="spieler"></p>
+  </header>
+
+  <br><br>
+
+  
+ 
+
+
+  
+
+    <a href="weiter.html">Versuche dein Glück</a> <br> <br> <br>
+    
+    <a href="weiter.html">Versuche dein Glück</a> <br> <br> <br>
+  
+    <a href="weiter.html"  onclick="Gewonnen()">Versuche dein Glück</a> <br> <br> <br>
+  
+    <a href="weiter.html">Versuche dein Glück</a> <br> <br> <br>
+  
+    <a href="weiter.html">Versuche dein Glück</a> 
+  
+  <script>
+ let benutzername = localStorage.getItem("benutzername");
+
+  document.getElementById("spieler").textContent =
+    "Spieler: " + benutzername;
+
+    function Gewonnen() {alert("du hast gewonnen")}
+    
+  </script>
+
+</body>
+</html>
