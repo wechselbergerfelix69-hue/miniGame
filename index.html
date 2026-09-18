@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pen</title>
+    <style>
+
+body {
+  padding:0px;
+  background:lightblue;
+}
+
+      a { color:white;
+        background:grey;
+        text-decoration: none;
+        padding: 10px;
+        font-size:30px;
+         border-radius: 10px;}
+      
+      label{
+        font-family:Verdana;
+        color:grey;
+        
+      }
+      
+      div {
+        font-size:50px;
+      }
+      button {font-size:30px;
+             background:grey;
+             color:white;
+             }
+
+      input {
+        font-size:30px;
+        background:grey;
+        color:white;
+      }
+    </style>
+  </head>
+  <body>
+<div>
+  <label>Gebe dein alter ein:</label> <br>
+  <input type="number" id="alter" >  
+    <button onclick="prüfen()">Prüfen</button>
+    <p id="ausgabe"></p> 
+  <a href="weiter.html">Weiter</a>
+  
+</div>
+   
+    <script>
+
+      
+  function prüfen() {
+    let alter = document.getElementById("alter").value;
+
+    if (alter >= 14)
+      document.getElementById("ausgabe").textContent = "Du bist alt genug";
+    else
+      document.getElementById("ausgabe").textContent = "Du bist nicht alt genug";
+  }
+
+  
+</script>
+    
+  </body>
+</html>
