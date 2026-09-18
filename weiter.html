@@ -1,82 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pen</title>
-    <style>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pen</title>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-      
- header {height:70px;
-        background:grey;
-         font-size:50px;
-         color:white;
-         font-family:Verdana;
-        }
-      
-body {
-  background:lightblue;
-   
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    header {
+      height: 70px;
+      background: grey;
+      font-size: 50px;
+      color: white;
+      font-family: Verdana;
+    }
 
-      a { color:white;
-        background:grey;
-        text-decoration: none;
-        padding: 10px;
-        font-size:30px;
-         border-radius: 10px;}
-      
-      label{
-        font-family:Verdana;
-        color:grey;
-        font-size:30px;
-        
-      }
-      
-      div {
-        font-size:50px;
-      }
-      button {font-size:30px;
-             background:grey;
-             color:white;
-             }
+    body {
+      background: lightblue;
+    }
 
-      input {
-        font-size:30px;
-        background:grey;
-        color:white;
+    a {
+      color: white;
+      background: grey;
+      text-decoration: none;
+      padding: 10px;
+      font-size: 30px;
+      border-radius: 10px;
+    }
 
-      }
+    label {
+      font-family: Verdana;
+      color: grey;
+      font-size: 30px;
+    }
 
-  
-    </style>
-  </head>
-  <body>
+    button {
+      font-size: 30px;
+      background: grey;
+      color: white;
+    }
 
-    <header>
-     <p id="benutzer">Melde dich an</p>
-    </header>
-    <br> <br>
-    <a  href="index.html">zurück</a> <br> <br> <br> <br>
-  <label>Benutzername:</label>  <br>
-  <input type="text" id="benutzername"> <br> <br>
-    <button onclick="bestätigen()">bestätigen</button>
-    <script>
-function bestätigen() {
-  let benutzername = document.getElementById("benutzername").value;
+    input {
+      font-size: 30px;
+      background: grey;
+      color: white;
+    }
+  </style>
+</head>
 
-  document.getElementById("benutzer").textContent = benutzername;
-}
+<body>
 
+  <header>
+    <p id="benutzer">Melde dich an</p>
+  </header>
 
-  
-</script>
-    
-  </body>
+  <br><br>
+
+  <a href="index.html">zurück</a>
+
+  <br><br><br><br>
+
+  <label>Benutzername:</label>
+  <br>
+
+  <input type="text" id="benutzername">
+
+  <br><br>
+
+  <button onclick="bestätigen()">bestätigen</button>
+
+  <br><br>
+
+  <a href="Spiel.html">Zum Spiel</a>
+
+  <script>
+    function bestätigen() {
+      let benutzername = document.getElementById("benutzername").value;
+
+      document.getElementById("benutzer").textContent = benutzername;
+
+      localStorage.setItem("benutzername", benutzername);
+    }
+  </script>
+
+</body>
 </html>
